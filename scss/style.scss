@@ -15,6 +15,7 @@ $maxWidth: 1366px;
 
 body {
     font-family: 'Montserrat', sans-serif;
+    color: $black;
 }
 
 .wrapper {
@@ -35,7 +36,7 @@ body {
 }
 
 .label {
-    font-size: 12;
+    font-size: 12px;
     line-height: 2.5;
     letter-spacing: 1.2px;
     text-transform: uppercase;
@@ -45,12 +46,16 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 16px;
     line-height: 24px;
+    color: #787878;
 }
 
 .btn {
-    font-size: 12px;
+    display: inline-block;
     padding: 23px 46px;
     background-color: $blue;
+    color: #fff;
+    @extend .label;
+    line-height: 1;
 }
 
 //===============================================================================================================================
@@ -88,6 +93,39 @@ body {
     }
 }
 
+//===============================================================================================================================
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 630px;
+    background-color: $grey;
+    &__inner {
+        max-width: 475px;
+        width: 100%;
+        float: right;
+        margin-right: 26px;
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__title {
+        font-size: 38px;
+        line-height: 1.2;
+        margin-bottom: 32px;
+    }
+
+    &__text {
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 18px;
+        line-height: 28 / 18 * 100%;
+        color: #787878;
+        margin-bottom: 39px;
+    }
+
+    // &__btn {}
+}
 
 
 
