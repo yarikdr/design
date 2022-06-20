@@ -354,3 +354,52 @@ body {
     }
 }
 
+//===============================================================================================================================
+
+
+.works {
+    &__works {
+        max-width: $maxWidth;
+        width: auto;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 341px));
+        grid-template-rows: repeat(2, 300px);
+        grid-auto-rows: 0;
+        justify-content: center;
+
+        //set colors
+        li:nth-child(1) {background: #848484;}
+        li:nth-child(2) {background: #dddddd;}
+        li:nth-child(3) {background: #B8CDBE;}
+        li:nth-child(4) {background: #A48234;}
+        li:nth-child(5) {background: #1F4E41;}
+        li:nth-child(6) {background: #74345A;}
+        li:nth-child(7) {background: #6686A2;}
+        li:nth-child(8) {background: #20725B;}
+        li:hover {
+            background: #000 url("../img/numbers/eye.png") center / auto no-repeat;
+        }
+    }
+
+    &__btn {
+        background-color: #f5f5f5;
+        padding: 46px 0;
+        text-align: center;
+        color: #8e8e8e;
+        width: 100%;
+    }
+}
+
+.view-all {
+    grid-auto-rows: 300px;
+}
+
+.work {
+    transition: background-color 0.5s ease 0s;
+    font-size: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
