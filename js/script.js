@@ -12,10 +12,9 @@ document.querySelector('.works__btn').addEventListener('click', () => {
 //process 
 const video = document.querySelector('.process__video > video'),
       pause = document.querySelector('.process__pause');
-
 let state = false;
 
-video.addEventListener('click', () => {
+const pauseFunc = () => {
     if (state) {
         video.pause();
         state = false;
@@ -25,7 +24,10 @@ video.addEventListener('click', () => {
         state = true;
         pause.classList.add('hide');
     }
-});
+};
+
+video.addEventListener('click', pauseFunc);
+pause.addEventListener('click', pauseFunc);
 
 //services 
 const services = document.querySelector('.services__inner');
