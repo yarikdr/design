@@ -581,3 +581,77 @@ body {
 }
 
 //===============================================================================================================================
+
+.project {
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5F5F5;
+    >* {
+        margin-bottom: 35px;
+    }
+
+    >*:last-child {
+        margin-bottom: 0;
+    }
+    &__title {
+        text-align: center;
+    }
+
+    &__text {
+        text-align: center;
+        max-width: 540px;
+    }
+
+    // &__form {}
+}
+
+.form {
+    max-width: 700px;
+    padding: 0 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__inputs {
+        width: 100%;
+        display: grid;
+        grid-template: 
+            [start] "i1 i2" 1fr [row2] 
+            [row2] "i3 i3" 1fr [row-end] / minmax(140px, 320px)  minmax(140px, 320px);
+        gap: 30px;
+        margin-bottom: 30px;
+
+        input:first-child {grid-area: i1;}
+        input:nth-child(2) {grid-area: i2;}
+        input:last-child {grid-area: i3;}
+        input {
+            background-color: #fff;
+            padding: 18px 20px;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 15px;
+            color: #787878;
+        }
+        @media (max-width: $bp4) {
+            grid-template: 
+                [start] "i1" 1fr [row2] 
+                [row2] "i2" 1fr [row3] 
+                [row3] "i3" 1fr [row-end] / 1fr;
+        }
+    }
+
+    &__textarea {
+        background-color: #fff;
+        padding: 18px 20px;
+        height: 170px;
+        width: 100%;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 15px;
+        color: #787878;
+        margin-bottom: 30px;
+    }
+
+    // &__btn {}
+}
+
