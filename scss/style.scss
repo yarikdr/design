@@ -24,6 +24,10 @@ body {
     color: $black;
 }
 
+.hide {
+    display: none;
+}
+
 .wrapper {
     height: 100vh;
 }
@@ -402,4 +406,65 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+//===============================================================================================================================
+
+.process {
+    padding: 100px 0;
+    &__inner {
+        >*{
+            margin-bottom: 40px;
+        }
+
+        >*:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__text {
+        max-width: 620px;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 40px;
+    }
+
+    &__video {
+        position: relative;
+        video {
+            width: 100%;
+        }
+    }
+
+    &__pause {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background-color: $blue;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            border-left: 15px solid #fff;
+            border-bottom: 10px solid transparent;
+            border-top: 10px solid transparent;
+        }
+
+    }
+}
+
+//===============================================================================================================================
 
