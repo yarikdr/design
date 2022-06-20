@@ -26,3 +26,32 @@ video.addEventListener('click', () => {
         pause.classList.add('hide');
     }
 });
+
+//services 
+const services = document.querySelector('.services__inner');
+
+const info = [
+    {title: 'ui / ux design', text: 'Be set fourth land god darkness make it wherein own'},
+    {title: 'web development', text: 'A she\'d them bring void moving third she\'d kind fill'},
+    {title: 'app / mobile', text: 'Dominion man second spirit he, earth they\'re creeping'},
+    {title: 'game design', text: 'Morning his saying moveth it multiply appear life be'},
+    {title: 'SEO / marketing', text: 'Give won\'t after land fill creeping meat you, may'},
+    {title: 'photography', text: 'Creepeth one seas cattle grass give moving saw give'},
+    {title: 'graphic design', text: 'Open, great whales air rule for, fourth life whales'},
+    {title: 'illustrations', text: 'Whales likeness hath, man kind for them air two won\'t'},
+];
+
+
+
+info.forEach(({title, text}, i) => {
+    const elem = `
+        <li class="service">
+            <div class="service__logo">
+                <img src="./img/services/0${i+1}.png"/>
+            </div>
+            <h5 class="service__title label">${title}</h5>
+            <div class="service__text text">${text}</div>
+        </li>
+    `;
+    services.insertAdjacentHTML('beforeend', elem);
+});
