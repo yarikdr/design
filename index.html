@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -136,9 +137,38 @@
                     </ul>
                 </div>
             </section>
+            <section class="comments swiper">
+                <div class="comments__wrapper swiper-wrapper">
+                    <div class="comments__slide swiper-slide">
+                        <div class="comments__text">
+                            “ Outstanding job and exceeded all expectations. It was a pleasure 
+                            to work with them on a sizable first project and am looking 
+                            forward to start the next one asap.”
+                        </div>
+                        <h5 class="comments__author label">Michael Hopkins</h5>
+                    </div>
+                    <div class="comments__slide swiper-slide">
+                        <div class="comments__text">
+                            “ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero delectus in eum esse, 
+                            maiores, ipsam accusantium aliquam autem quae explicabo quod ad labore saepe voluptate 
+                            modi suscipit atque repellendus dolorum. ”
+                        </div>
+                        <h5 class="comments__author label">Did Ivan</h5>
+                    </div>
+                    <div class="comments__slide swiper-slide">
+                        <div class="comments__text">
+                            “ It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                            The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters”
+                        </div>
+                        <h5 class="comments__author label">Did Petro</h5>
+                    </div>
+                </div>
+                <div class="comments__pagination"></div>
+            </section>
         </main>
         <footer class="footer"></footer>
     </div>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

@@ -55,3 +55,12 @@ info.forEach(({title, text}, i) => {
     `;
     services.insertAdjacentHTML('beforeend', elem);
 });
+
+//comments
+
+const comments = new Swiper('.comments', {
+    pagination: {
+        el: '.comments__pagination',
+        clickable: true
+    }
+});
