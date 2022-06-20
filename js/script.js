@@ -64,3 +64,14 @@ const comments = new Swiper('.comments', {
         clickable: true
     }
 });
+
+//brands
+const brands = document.querySelector('.brands__inner');
+for (let i = 1; i < 6; i++) {
+    const elem = `
+        <li>
+            <img src="./img/brands/0${i}.png"/>
+        </li>
+    `;
+    brands.insertAdjacentHTML('beforeend', elem);
+}
