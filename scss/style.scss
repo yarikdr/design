@@ -24,6 +24,10 @@ body {
     color: $black;
 }
 
+a {
+    cursor: pointer;
+}
+
 .hide {
     display: none;
 }
@@ -80,7 +84,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 38px 0;
+    padding: 20px 0;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -94,7 +98,7 @@ body {
 
     &__menu {
         display: flex;
-        li {
+        a {
             margin: 0px 30px 0px 0px;
             transition: color 0.3s ease 0s;
             &:hover {
@@ -136,7 +140,7 @@ body {
 .burger {
     display: none;
     position: absolute;
-    top: 38px;
+    top: 20px;
     right: 15px;
     width: 40px;
     height: 25px;

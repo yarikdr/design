@@ -1,8 +1,30 @@
 //header burger
-document.querySelector('.burger').addEventListener('click', () => {
-    document.querySelector('.burger').classList.toggle('active');
+const burger = document.querySelector('.burger');
+function toggleBurger() {
+    burger.classList.toggle('active');
     document.querySelector('.header__menu').classList.toggle('active');
-});
+}
+burger.addEventListener('click', toggleBurger);
+
+function setBtns() {
+    const btns = {
+        '.works': document.querySelector('#toWorks'),
+        '.process': document.querySelector('#toProcess'),
+        '.services': document.querySelector('#toServices'),
+        '.comments': document.querySelector('#toComments'),
+    };
+
+    for (let link in btns) {
+        btns[link].addEventListener('click', () => {
+            document.querySelector(link).scrollIntoView({
+                behavior: 'smooth'
+            });
+            toggleBurger();
+        });
+    }
+}
+
+setBtns();
 
 // works
 document.querySelector('.works__btn').addEventListener('click', () => {
@@ -64,7 +86,13 @@ const comments = new Swiper('.comments', {
     pagination: {
         el: '.comments__pagination',
         clickable: true
-    }
+    },
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
+    },
+    loop: true,
+    slidesPerView: 1,
 });
 
 //brands
