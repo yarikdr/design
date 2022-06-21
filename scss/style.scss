@@ -13,6 +13,9 @@ $bp3: 768px;
 $bp4: 480px;
 $bp5: 320px;
 
+$mainFont: 'Montserrat', sans-serif;
+$secondFont: 'Nunito Sans', sans-serif;
+
 @mixin adaptiv-font($pcSize, $mobSize) {
     $addSize: $pcSize - $mobSize;
     $maxWidth: $maxWidth - 320;
@@ -50,6 +53,11 @@ a {
     @media (max-width: $bp5) {
         text-align: center;
     }
+}
+
+.main-title {
+    font-size: 38px;
+    line-height: 1.2;
 }
 
 .label {
@@ -101,6 +109,7 @@ a {
         a {
             margin: 0px 30px 0px 0px;
             transition: color 0.3s ease 0s;
+            color: $black;
             &:hover {
                 color: $blue;
             }
@@ -202,8 +211,6 @@ a {
         }
     }
     &__title {
-        font-size: 38px;
-        line-height: 1.2;
         margin-bottom: 32px;
     }
 
@@ -731,3 +738,5 @@ a {
         }
     }
 }
+
+@import "about";
