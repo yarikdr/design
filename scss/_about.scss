@@ -22,3 +22,66 @@
         text-align: center;
     }
 }
+
+.about-me {
+    padding: 140px 0;
+    background: linear-gradient(to right, #E2E2E2 50%, #F5F5F5 50%);
+    &__inner {
+        display: flex;
+        >* {
+            flex: 1 1 50%;
+        }
+    }
+    &__empty {
+        @media (max-width: $bp2) {
+            display: none;
+        }
+    }
+
+    &__content {
+        padding-left: 65px;
+        display: flex;
+        flex-direction: column;        
+        >* {
+            margin-bottom: 40px;
+        }
+        >*:last-child {
+            margin-bottom: 0;
+        }
+        @media (max-width: $bp2) {
+            padding-left: 0;
+            align-items: center;
+        }
+    }
+
+    // &__title {}
+
+    &__text {
+        max-width: 450px;
+        >* {
+            margin-bottom: 40px;
+        }
+        >*:last-child {
+            margin-bottom: 0;
+        }
+        @media (max-width: $bp2) {
+            text-align: center;
+        }
+    }
+
+    &__signature {
+        width: 100%;
+        height: 60px;
+        background: url("../img/about/signature.png") 0 0 / auto no-repeat;
+        @media (max-width: $bp2) {
+            background-position: center;
+        }
+    }
+    @media (max-width: $bp2) {
+        background: #F5F5F5;
+    }
+    @media (max-width: $bp4) {
+        padding: 100px 0;
+    }
+}
+
