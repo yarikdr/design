@@ -36,7 +36,12 @@ a {
 }
 
 .wrapper {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    >main {
+        flex: 1 1 auto;
+    }
 }
 
 .container {
@@ -616,11 +621,12 @@ a {
         padding: 0 10px;
     }
 
-    // &__form {}
+    &__form {
+        max-width: 700px;
+    }
 }
 
 .form {
-    max-width: 700px;
     padding: 0 15px;
     width: 100%;
     display: flex;
@@ -739,4 +745,4 @@ a {
     }
 }
 
-@import "about";
+@import "about", "contact";
