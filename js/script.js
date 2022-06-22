@@ -4,6 +4,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function toggleBurger() {
         burger.classList.toggle('active');
         document.querySelector('.header__menu').classList.toggle('active');
+        document.body.classList.toggle('lock');
     }
     burger.addEventListener('click', toggleBurger);
 
@@ -55,6 +56,10 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    video.addEventListener('ended', () => {
+        pause.classList.remove('hide');
+    });
+
     video.addEventListener('click', pauseFunc);
     pause.addEventListener('click', pauseFunc);
 
@@ -89,7 +94,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //comments
 
-    const comments = new Swiper('.comments', {
+    const commentsSwiper = new Swiper('.comments', {
         pagination: {
             el: '.comments__pagination',
             clickable: true
