@@ -1,0 +1,43 @@
+.designer {
+    padding: 140px 0 0 0;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        max-width: 510px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    &__grid {
+        max-width: $maxWidth;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 341px));
+        grid-template-rows: repeat(3, 300px);
+        grid-auto-rows: 0;
+        justify-content: center;
+
+        //set colors
+        li:nth-child(1) {background: #848484;}
+        li:nth-child(2) {background: #dddddd;}
+        li:nth-child(3) {background: #B8CDBE;}
+        li:nth-child(4) {background: #A48234;}
+        li:nth-child(5) {background: #1F4E41;}
+        li:nth-child(6) {background: #74345A;}
+        li:nth-child(7) {background: #6686A2;}
+        li:nth-child(8) {background: #20725B;}
+        li:nth-child(9){background-color: #7E7095;}
+        li:nth-child(10){background-color: #AF4C2E;}
+        li:nth-child(11){background-color: #6A0F14;}
+        li:nth-child(12){background-color: #CDF7E8;}
+        li:hover {
+            background: $blue url("../img/numbers/eye.png") center / auto no-repeat;
+        }
+    }
+    // &__btn {}
+}
